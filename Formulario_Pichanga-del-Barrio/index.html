@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Css/index.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <main class="main">
+        <div class="main_top-of-form">
+            <span class="top-of-form_circle circle-one circle_show" data-index-number="1" id="one">1</span>
+            <span class="top-of-form_circle  circle-two" data-index-number="2" id="two">2</span>
+            <span class="top-of-form_circle  circle-three" data-index-number="3" id="three">3</span>
+        </div>
+    <div class="form_logo"></div>
+    <div class="container-main">
+        <form class="main_form" netlify>
+            <div class="form_div form_step-first form_show" data-id="1">
+                <div class="step-information step-one_name">
+                    <label class="step_label" for="name">Nombre del Capitán</label>
+                    <input class="step_input" type="text" name="captains-name" id="nameId" placeholder="Ingresa tu Nombre" required>
+                </div>
+                <div class="step-information step-one_number">
+                    <label class="step_label" for="mobile">Numero de Celular</label>
+                    <input class="step_input" type="number" name="mobile" id="mobileId" placeholder="Ingresa tu Numero de Celular" oninput="maxlengthNumber(this);" maxlength="9" required>
+                </div>
+                <div class="step-information step-one_email">
+                    <label class="step_label" for="name">Email</label>
+                    <input class="step_input" type="email" name="email" id="emailId" placeholder="Ingresa tu Correo" required>
+                </div>
+                <div class="step-information step-one_age">
+                    <label class="step_label" for="age">Categoria</label>
+                    <select name="Category" id="categoryId" required>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007-2008</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form_div form_step-second" data-id="2">
+                <div class="step-information step-two_names">
+                    <label class="step_label"  for="DatosDelEquipo">Nombre Apellido y DNI</label>
+                    <textarea class="step_input textarea-step"  placeholder="David Villanueva - 11223344" name="Datos-Del-Equipo" id="teamDate" required></textarea>                    
+                </div>
+            </div>
+            <div class="form_div form_step-third" data-id="3">
+                  <h3 class="step_label">Medio de Pago</h3>
+                  <div class="form_div_radio">
+                    <span class="logo yape-logo"></span>
+
+                    <input class="input-radio radio-yape" type="radio" value="yape" name="medio-de-pago">
+                    <label class="form_radio yape-label" for="Yape"></label>
+                    <span class="logo plin-logo"></span>
+                    <input class="input-radio radio-plin" value="plin bancaria" type="radio" name="medio-de-pago">
+                    <label class="form_radio plin-label" for="plin"></label>
+                    <span class="logo pago-efectivo-logo"></span>
+                    <input class="input-radio radio-efectivo" value="pago efectivo" type="radio" name="medio-de-pago">
+                    <label class="form_radio efectivo-label" for="efectivo" ></label>
+                </div>
+            </div>
+            <div class="form_box-inputs">
+                <input class="form_input input_show" type="button" onclick="cambiar()" value="Continuar" id="skipId" data-index-number="1">
+                <input class="form_input" type="submit" name="Enviar" onclick="enviarDatos()" target="_blank" id="EnviarID" id="enviarId" data-index-number="2">
+            </div>
+        </form>
+    </div>
+    </main>
+    <!-- JS Particles.js -->
+    <script src="Js/particles.min.js"></script>
+    <!-- JS scripts -->
+    <script src="JS/effects.js"></script>
+    <script src="Js/script.js"></script>
+</body>
+</html>

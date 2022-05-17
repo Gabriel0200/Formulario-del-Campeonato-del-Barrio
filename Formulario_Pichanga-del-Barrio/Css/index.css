@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-color: #000000;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .main_top-of-form {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.main .main_top-of-form .top-of-form_circle {
+  height: 5rem;
+  width: 5rem;
+  background-color: #f7dc6f;
+  border-radius: 50%;
+  margin: 0 2.8rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #f1c40f 0 0 0.6rem 0.2rem;
+}
+.main .main_top-of-form .circle_show {
+  background-color: #808b96;
+  z-index: 5;
+  transition: background 0.5s;
+}
+.main .form_logo {
+  position: relative;
+  z-index: 1000;
+  background-image: url(../../Img/logo-pichanga.jpg);
+  width: 15rem;
+  height: 15rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 6rem;
+  border-radius: 50%;
+  box-shadow: #000 0px 0px 5px;
+}
+.main .container-main {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  z-index: 10;
+  margin: 1rem;
+  background-color: #f1c40f;
+  border-style: solid;
+  border-radius: 2.5rem;
+  border-color: #000000;
+  border-width: 0.1rem;
+  box-shadow: #d4ac0d 0 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem;
+}
+.main .container-main .main_form {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-column: 1; */
+  /* grid-template-rows: 1fr; */
+  /* opacity: 1; */
+  align-items: center;
+  /* grid-row: 1; */
+  gap: 2rem;
+}
+.main .container-main .main_form .form_div {
+  overflow: hidden;
+  position: relative;
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.main .container-main .main_form .form_div .step-information {
+  padding: 0.5rem 1rem;
+}
+.main .container-main .main_form .form_show {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.main .container-main .main_form .form_step-first .step-information {
+  text-align: center;
+}
+.main .container-main .main_form .form_step-first .step-information .step_label {
+  font-size: 2.5rem;
+}
+.main .container-main .main_form .form_step-first .step-information .step_input {
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main .container-main .main_form .form_step-first .step-information .step_input:hover {
+  box-shadow: #808b96 0 0 1rem 0.1rem;
+}
+.main .container-main .main_form .form_step-first .step-information .step_input:focus-visible {
+  outline: none;
+}
+.main .container-main .main_form .form_step-first .step-one_age {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.main .container-main .main_form .form_step-first .step-one_age select {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-style: none;
+  border-radius: 0.5rem;
+}
+.main .container-main .main_form .form_step-first .step-one_age select:focus-visible {
+  outline: none;
+}
+.main .container-main .main_form .form_step-first .step-one_age select:hover {
+  box-shadow: #808b96 0 0 1rem 0.1rem;
+}
+.main .container-main .main_form .form_step-first .step-one_age select option {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #f1c40f;
+  color: #373736;
+}
+.main .container-main .main_form .form_step-second .step-information {
+  display: flex;
+  flex-direction: column;
+}
+.main .container-main .main_form .form_step-second .step-information .step_label {
+  font-size: 2.5rem;
+}
+.main .container-main .main_form .form_step-second .step-information .step_input {
+  border-style: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main .container-main .main_form .form_step-second .step-information .step_input:focus-visible {
+  outline: none;
+}
+.main .container-main .main_form .form_step-second .step-information .textarea-step {
+  resize: none;
+  height: 19rem;
+  padding: 1rem;
+}
+.main .container-main .main_form .form_step-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .container-main .main_form .form_step-third .step_label {
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+.main .container-main .main_form .form_step-third .form_div_radio {
+  display: grid;
+  grid-template-areas: "primero segundo tercero" "cuarto quinto sexto";
+}
+.main .container-main .main_form .form_step-third .form_div_radio .logo {
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  padding: 4rem;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .yape-logo {
+  background-image: url("../../Img/logo-yape.png");
+  grid-area: primero;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .yape-label {
+  grid-area: segundo;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .plin-logo {
+  grid-area: tercero;
+  background-image: url("../../Img/logo-plin.png");
+}
+.main .container-main .main_form .form_step-third .form_div_radio .plin-label {
+  grid-area: cuarto;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .pago-efectivo-logo {
+  grid-area: quinto;
+  background-image: url("../../Img/logo-pagoefectivo.png");
+}
+.main .container-main .main_form .form_step-third .form_div_radio .efectivo-label {
+  grid-area: sexto;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .input-radio {
+  position: relative;
+  bottom: 3rem;
+  left: 4rem;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .radio-yape {
+  bottom: 10rem;
+  left: 4rem;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .radio-plin {
+  left: 15rem;
+  bottom: 10rem;
+}
+.main .container-main .main_form .form_step-third .form_div_radio .radio-efectivo {
+  bottom: 0rem;
+  left: -6rem;
+}
+.main .container-main .main_form .form_step-third select {
+  padding: 0.8rem 0;
+  border-style: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.main .container-main .main_form .form_step-third select option {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #f1c40f;
+  color: #373736;
+}
+.main .container-main .main_form .form_box-inputs {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-column: 1; */
+  /* grid-template-rows: 1fr; */
+  /* opacity: 1; */
+  align-items: center;
+  /* grid-row: 1; */
+  gap: 2rem;
+  padding: 2rem;
+}
+.main .container-main .main_form .form_box-inputs .form_input {
+  background-color: #f7dc6f;
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  border-style: none;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.main .container-main .main_form .form_box-inputs .form_input:hover {
+  box-shadow: #808b96 0 0 1rem 0.1rem;
+}
+.main .container-main .main_form .form_box-inputs .input_show {
+  opacity: 1;
+  pointer-events: inherit;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
